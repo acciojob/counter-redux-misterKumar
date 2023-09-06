@@ -1,13 +1,16 @@
-
-import React from "react";
-import './../styles/App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import Counter from './Counter';
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+    <Provider store={store}>
+      <div className="App">
+        <Counter />
+      </div>
+    </Provider>
+  );
+};
 
-export default App
+export default App;
